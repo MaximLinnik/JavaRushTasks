@@ -1,9 +1,15 @@
 package com.javarush.task.task24.task2413;
 
+import java.util.List;
+
 public class Arkanoid {
 
     private int width;
     private int height;
+    private Ball ball;
+    private Stand stand;
+    private List<Brick> bricks;
+    static Arkanoid game;
 
     public Arkanoid(int width, int height) {
         this.width = width;
@@ -18,6 +24,18 @@ public class Arkanoid {
         return height;
     }
 
+    public List<Brick> getBricks() {
+        return bricks;
+    }
+
+    public Stand getStand() {
+        return stand;
+    }
+
+    public Ball getBall() {
+        return ball;
+    }
+
     public void setWidth(int width) {
         this.width = width;
     }
@@ -25,6 +43,26 @@ public class Arkanoid {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    public void setBricks(List<Brick> bricks) {
+        this.bricks = bricks;
+    }
+
+    public void setStand(Stand stand) {
+        this.stand = stand;
+    }
+
+    public void setBall(Ball ball) {
+        this.ball = ball;
+    }
+
+    public void run(){
+
+    }
+
+    public void move(){}
+
+
 
     public static void main (String[] args){
         
