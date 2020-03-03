@@ -13,8 +13,21 @@ public class Solution {
     }
 
     public static class GenerateThread extends Thread{
-        public GenerateThread(){
+        public GenerateThread() {
+            super(String.valueOf(++createdThreadCount));
+            this.start();
+        }
 
+        @Override
+        public String toString() {
+            //return super.toString();
+            return getName()+" created";
+        }
+
+        public void run(){
+            if (createdThreadCount<Solution.count){
+                System.out.println(new GenerateThread());
+            }
         }
     }
 }
