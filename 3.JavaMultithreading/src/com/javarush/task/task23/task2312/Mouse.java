@@ -9,11 +9,11 @@ public class Mouse {
         this.y = y;
     }
 
-    public int getY() {
-        return y;
-    }
-
     public int getX() {
         return x;
+    }
+
+    public int getY() {
+        return y;
     }
 }

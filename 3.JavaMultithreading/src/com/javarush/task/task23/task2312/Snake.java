@@ -30,6 +30,20 @@ public class Snake {
             this.isAlive = true;
         }
 
+        public void move() {
+            if (!isAlive) return;
+            if (direction == SnakeDirection.UP)
+                move(0, -1);
+            else if (direction == SnakeDirection.RIGHT)
+                move(1, 0);
+            else if (direction == SnakeDirection.DOWN)
+                move(0, 1);
+            else if (direction == SnakeDirection.LEFT)
+                move(-1, 0);
+    }
+
+    public void move(int x, int y){}
+
         public int getX(){
             return this.sections.get(0).getX();
         }
@@ -37,6 +51,4 @@ public class Snake {
         public int getY(){
             return this.sections.get(0).getY();
          }
-
-         public void move(){}
 }
