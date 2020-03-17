@@ -34,6 +34,4 @@ public class SnakeSection {
         result = 31 * result + y;
         return result;
     }
-
-
 }
